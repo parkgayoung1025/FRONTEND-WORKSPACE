@@ -1,0 +1,55 @@
+div{ box-sizing: border-box; border: 1px solid red; }
+.warp{
+    width: 1536px;
+    height: 864px;
+    margin: auto;
+}
+.wrap>div{
+    width: 100%;
+}
+#header{
+    height: 30%;
+    display: flex;
+    margin: auto;
+}
+#header>div{
+    height: 100%;
+    float: left;
+}
+#logo{
+    width: 20%;
+    position: relative;
+}
+#logo img{
+    position: absolute;
+    margin: auto;
+    left: 73px;
+    top: 10px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul{
+    list-style: none;
+}
+#header1{
+    width: 80%;
+    margin: auto;
+}
+#header1>ul{
+    border: 1px solid blue;
+}
+#header1>ul>li{
+    float: left;
+    margin-left: 50px;
+    font-size: 15px;
+    border: 1px solid red;
+}
+#content>div{
+    height: 100%;
+}
+#footer>div{
+    height: 100%;
+    float: left;
+}
