@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sm</title>
+    <link rel="stylesheet" href="resources/css/sm.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="resources/js/sm.js">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="preload" as="style">
+</head>
+<body>
+    <div class="background">
+        <img src="resources/image/artwork-440x440.jpg" id="bgimg">
+    </div>
+    <main class="main">
+        <div id="main_layout">
+            <div id="player">
+                <div id="cover_player">
+                    <div id="cover_art">
+                        <img src="resources/image/artwork-440x440.jpg" id="coverimg">
+                    </div>
+                </div>
+                <div id="media_player">
+                    <div id="mp_container">
+                        <img src="resources/image/artwork-440x440.jpg" id="coverimg2">
+                        <div id="cover_overlay"></div>
+                    </div>
+                    <div id="visualizer">
+                        <canvas width="320" height="90"></canvas>
+                    </div>
+                    <div id="control_container">
+                        <div id="video_progress">
+                            <div id="progressbar"></div>
+                            <div id="pb_load"></div>
+                        </div>
+                        <div id="time_container"></div>
+                        <div id="control">
+                            <div id="play_button">
+                                <a href="javascript:void(0);">
+                                    <span><img src="resources/image/play_button.svg" id="playbtn"></span>
+                                </a>
+                            </div>
+                            <div id="pnbtn">
+                                <a href="javascript:void(0);">
+                                    <img src="resources/image/controls_next.svg" id="nextbtn" style="width: 20px; height: 20px; margin-top: 143px; margin-left: 286px; position: absolute; display: none;">
+                                </a>
+                                <a href="javascript:void(0);">
+                                    <img src="resources/image/controls_prev.svg" id="prevbtn" style="width: 20px; height: 20px; margin-top: 141px; margin-left: 14px; position: absolute; display: none;">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <audio style="width: 1; height: 1;" src="">
+                        <source src="https://p.scdn.co/mp3-preview/c23c57f0f7bf6b4e57f02aded31091e6a8c54d1b?cid=18fc7b00a64d447393f6ee0dd98a70be" type="audio/mpeg" data-test="music-player-sample-source">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <div id="layoutcover_sizer"></div>
+        <div id="layoutcover_scroll_sizer"></div>
+        <div id="layout_header"></div>
+        <header class="header">
+            <a href="https://nct127.lnk.to/Ay-Yo#music-services" id="header_link">
+                <h1>
+                    NCT 127 <br>
+                    Ay-Yo <br>
+                    The 4th Album Repackage
+                </h1>
+                <p>Choose mousic service</p>
+            </a>
+        </header>
+        <div id="layout_content">
+            <nav class="music_services" role="navigation">
+                <div id="list_item">
+                    <a id="list_link" href="https://shop.nct127.com/?utm_source=Original&utm_campaign=NCT127Ay-Yo-The4thAlbumRepackage20230104&utm_medium=original&utm_referrer=https%3A%2F%2Fwww.smtown.com%2F&utm_board=virginmusic-us&utm_country=US&utm_linkurl=NCT127.lnk.to%2Fay-yo">
+                        <div id="list_content">
+                            <img src="resources/image/logo_nct127_onlight.svg">
+                            <button>
+                                <span class="btn_label">Go To</span>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <img src="resources/image/pause_button.svg" id="pausebtn" style="position:absolute; width: 35px; display:none;">
+        
+        <script>
+            $(function(){
+                $("#playbtn").click(function(){
+                    $("#playbtn").toggle(300);
+                    $("#pausebtn").toggle(300);
+                    $(this).css("backgroundColor", "rgba(0,0,0,.5)");
+                });
+
+                $("#pausebtn").click(function(){
+                    $("#playbtn").toggle(300);
+                    $("#pausebtn").toggle(300);
+                    $("#nextbtn").toggle(300);
+                    $("#prevbtn").toggle(300);
+                });
+            });
+        </script>
+    </main>
+</body>
+</html>
