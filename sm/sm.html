@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="resources/css/sm.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="stylesheet" href="resources/js/sm.js">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="preload" as="style">
+    <link rel="stylesheet" href="resources/css/font.css">
 </head>
 <body>
     <div class="background">
@@ -58,11 +58,11 @@
                 </div>
             </div>
         </div>
-        <div id="layoutcover_sizer"></div>
+        <div id="layoutcover_sizer"><img src="resources/image/pause_button.svg" id="pausebtn" style="position:absolute; width: 35px; display:none;"></div>
         <div id="layoutcover_scroll_sizer"></div>
-        <div id="layout_header"></div>
-        <header class="header">
-            <a href="https://nct127.lnk.to/Ay-Yo#music-services" id="header_link">
+        <div class="layout__header"></div>
+        <header class="header js-header">
+            <a href="https://nct127.lnk.to/Ay-Yo#music-services" class="header__link">
                 <h1>
                     NCT 127 <br>
                     Ay-Yo <br>
@@ -70,14 +70,108 @@
                 </h1>
                 <p>Choose mousic service</p>
             </a>
+            <div class="play-list">
+                <div class="tracks-container mCustomScrollbar _mCs_1">
+                    <div id="mCSB_1">
+                        <div id="mCSB_1_scrollbar_vertical">
+                            <div class="mCSB_draggerContainer">
+                                <div class="mCSB_dragger">
+                                    <div class="mCSB_dragger_bar"></div>
+                                </div>
+                                <div class="mCSB_draggerRail"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
         <div id="layout_content">
             <nav class="music_services" role="navigation">
-                <div id="list_item">
-                    <a id="list_link" href="https://shop.nct127.com/?utm_source=Original&utm_campaign=NCT127Ay-Yo-The4thAlbumRepackage20230104&utm_medium=original&utm_referrer=https%3A%2F%2Fwww.smtown.com%2F&utm_board=virginmusic-us&utm_country=US&utm_linkurl=NCT127.lnk.to%2Fay-yo">
-                        <div id="list_content">
+                <div class="list_item">
+                    <a class="list_link" href="https://shop.nct127.com/?utm_source=Original&utm_campaign=NCT127Ay-Yo-The4thAlbumRepackage20230104&utm_medium=original&utm_referrer=https%3A%2F%2Fwww.smtown.com%2F&utm_board=virginmusic-us&utm_country=US&utm_linkurl=NCT127.lnk.to%2Fay-yo">
+                        <div class="list_content">
                             <img src="resources/image/logo_nct127_onlight.svg">
-                            <button>
+                            <button class="btn music-service-list__btn">
+                                <span class="btn_label">Go To</span>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="list_item">
+                    <a class="list_link" href="https://smglobalshop.com/products/pre-order-nct-127-the-4th-album-repackage-ay-yo-a-ver">
+                        <div class="list_content">
+                            <img src="resources/image/logo_smglobalshop_onlight.svg">
+                            <button class="btn music-service-list__btn">
+                                <span class="btn_label">Go To</span>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="list_item">
+                    <a class="list_link" href="https://music.apple.com/kr/album/1662799809?app=music&at=11l5V7&ct=LFV_6d9944cef73bb15d2d4a77cab5f48e2c&itscg=30440&itsct=catchall_p3&lId=27395455&cId=none&sr=3&src=Linkfire&ls=1">
+                        <div class="list_content">
+                            <img src="resources/image/logo_applemusic_onlight.svg">
+                            <button class="btn music-service-list__btn">
+                                <span class="btn_label">Go To</span>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="list_item">
+                    <a class="list_link" href="https://www.deezer.com/album/393165487?app_id=140685&utm_source=partner_linkfire&utm_campaign=6d9944cef73bb15d2d4a77cab5f48e2c&utm_medium=Original&utm_term=objective-stream&utm_content=album-393165487">
+                        <div class="list_content">
+                            <img src="resources/image/logo_deezer_onlight.svg">
+                            <button class="btn music-service-list__btn">
+                                <span class="btn_label">Go To</span>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="list_item">
+                    <a class="list_link" href="https://soundcloud.com/nct127official/sets/ay-yo-the-4th-album-repackage">
+                        <div class="list_content">
+                            <img src="resources/image/logo_soundcloud_onlight.svg">
+                            <button class="btn music-service-list__btn">
+                                <span class="btn_label">Go To</span>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="list_item">
+                    <a class="list_link" href="https://open.spotify.com/album/3VjW3uIc8WG4tXF2wKW9BJ?referral=labelaffiliate&utm_source=1011lwwmhouL&utm_medium=Universal_Korea&utm_campaign=labelaffiliate">
+                        <div class="list_content">
+                            <img src="resources/image/logo_spotify_onlight.svg">
+                            <button class="btn music-service-list__btn">
+                                <span class="btn_label">Go To</span>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="list_item">
+                    <a class="list_link" href="https://music.youtube.com/playlist?list=OLAK5uy_lmRrudUgec9tHhWymBzLzF_HqBcE6zMAM&src=Linkfire&lId=57fcd367-4869-44a9-a5b7-d48847327f1b&cId=d3d58fd7-4c47-11e6-9fd0-066c3e7a8751">
+                        <div class="list_content">
+                            <img src="resources/image/logo_youtubemusic_onlight.svg">
+                            <button class="btn music-service-list__btn">
+                                <span class="btn_label">Go To</span>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="list_item">
+                    <a class="list_link" href="https://music.apple.com/kr/album/ay-yo-the-4th-album-repackage/1662799809">
+                        <div class="list_content">
+                            <img src="resources/image/logo_itunes_onlight.svg">
+                            <button class="btn music-service-list__btn">
+                                <span class="btn_label">Go To</span>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="list_item">
+                    <a class="list_link" href="https://www.youtube.com/watch?v=R9XpA_zXDDI">
+                        <div class="list_content">
+                            <img src="resources/image/logo_youtube_onlight.svg">
+                            <button class="btn music-service-list__btn">
                                 <span class="btn_label">Go To</span>
                             </button>
                         </div>
@@ -85,13 +179,28 @@
                 </div>
             </nav>
         </div>
-        <img src="resources/image/pause_button.svg" id="pausebtn" style="position:absolute; width: 35px; display:none;">
+        <footer style="display: block;">
+            <div id="lnk-c-footer" style class="is-ready">
+                <div class="lnk-c-footnote is-active">
+                    <p>
+                        By using this service, you agree to the use of cookies.
+                        <button class="link-c-inline-btn--white" onclick="lnk_consent('open_preferenes')">Click here</button>
+                        to manage your permissions.
+                    </p>
+                    <div class="lnk-c-footnote__affiliate">This page may contain affiliate links.</div>
+                </div>
+            </div>
+        </footer>
         
         <script>
             $(function(){
                 $("#playbtn").click(function(){
                     $("#playbtn").toggle(300);
                     $("#pausebtn").toggle(300);
+
+                    $("#nextbtn").hide(100);
+                    $("#prevbtn").hide(100);
+
                     $(this).css("backgroundColor", "rgba(0,0,0,.5)");
                 });
 
