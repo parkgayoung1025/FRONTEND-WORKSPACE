@@ -325,6 +325,16 @@ footer>div{
     background: url(https://www.smtown.com/resources/images/btn-icon-bullet-b.png) no-repeat 100% 5px;
     padding: 0 14px 0 0;
 }
-
+.errorTxt{
+    display: block;
+    margin-top: 12px;
+    color: #ff1601;
+    font-size: 14px;
+    text-align: left;
+}
+input[type="checkbox"]:checked + input[type='hidden'] + label{
+    background: url(https://www.smtown.com/resources/images/svg/member/btn_check_on.svg) no-repeat;
+    background-size: 21px;
+}
 
 

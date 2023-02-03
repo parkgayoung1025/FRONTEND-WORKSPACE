@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="resources/css/sm_login.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 <body>
     <div class="wrap">
@@ -33,15 +34,17 @@
                                 <div class="inputBox">
                                     <div>
                                         <input type="text" id="userId" name="userId" placeholder="이메일" value autocomplete="off">
+                                        <span id="userId.errors" class="errorTxt"></span>
                                     </div>
                                     <div>
                                         <input type="password" id="password" name="password" placeholder="비밀번호" value autocomplete="off">
+                                        <span id="password.errors" class="errorTxt"></span>
                                     </div>
                                 </div>
                                 <input type="checkbox" id="loginMaintain" name="maintenance" value="true">
                                 <input type="hidden" name="_maintenance" value="on">
                                 <label for="loginMaintain">로그인 상태 유지</label>
-                                <button type="submit" class="loginBtn" value="submit">로그인</button>
+                                <button type="submit" class="loginBtn" value="submit" onclick="return login();">로그인</button>                                
                                 <div>
                                     <input type="hidden" name="_csrf">
                                 </div>
@@ -123,5 +126,24 @@
             </div>
         </div>
     </div>
+    <script>
+        function login(){
+            let userId = document.getElementById("userId");
+            let password = document.getElementById("password");
+
+            if(userId.value == ""){
+                document.getElementById("userId.errors").innerHTML = "이메일을 입력해 주세요.";
+                return false;
+            }
+
+            if(password.value == ""){
+                document.getElementById("password.errors").innerHTML = "비밀번호를 입력해 주세요.";
+                return false;
+            }
+        }
+      
+
+
+    </script>
 </body>
 </html>
