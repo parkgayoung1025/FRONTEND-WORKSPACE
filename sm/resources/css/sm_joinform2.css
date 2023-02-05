@@ -126,207 +126,76 @@ ul, li{
 }
 .sigupBox{
     border-top: 3px solid #191919;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: none
+}
+.sigupBox dl{
+    display: block;
+    clear: both;
+    padding: 50px 0 20px;
+}
+dl, dt, dd{
+    list-style: none;
+}
+.sigupContent dl dt{
+    float: left;
+    margin-bottom: 20px;
+    clear: both;
+    width: 200px;
+    padding-left: 20px;
+    line-height: 50px;
+    color: #666;
+    font-size: 15px;
+}
+.sigupContent dl dd{
+    float: left;
+    margin-bottom: 20px;
+}
+.sigupContent dl dd input{
+    width: 420px;
+    height: 50px;
+    box-sizing: border-box;
+    border: 1px solid #e3e3e3;
+    padding: 0 17px 1px;
+    font-size: 15px;
+    font-family: 'Noto Sans KR';
+    background-color: #fff;
+    border-radius: 4px;
+}
+input[type="text"]{
+    background: #f2f2f2;
+}
+input[type="password"]{
+    background: #f2f2f2;
 }
 input{
-    font-size: 12px;
-}
-input[type="checkbox"]{
-    display: none;
-}
-label.all{
-    margin: 40px 0 10px;
-}
-input[type="checkbox"]+label{
-    display: inline-block;
-    min-width: 21px;
-    min-height: 21px;
-    line-height: 20px;
-    cursor: pointer;
-    background: url(https://www.smtown.com/resources/images/svg/member/btn_check_off.svg) no-repeat;
-    background-size: 21px;
-    padding-left: 33px;
-    box-sizing: border-box;
-    width: 100%;
-    word-break: keep-all;
-    word-wrap: break-word;
-}
-input[type="checkbox"]:checked + label{
-    background: url(https://www.smtown.com/resources/images/svg/member/btn_check_on.svg) no-repeat;
-    background-size: 21px;
-}
-.sigupContent label{
-    font-size: 17px;
-    font-weight: 500;
-    margin: 40px 0 15px;
-}
-label{
+    margin: 0;
+    outline: 0;
+    color: #191919;
     vertical-align: middle;
 }
-.sigupContent p{
-    font-size: 15px;
-    line-height: 25px;
-    color: #666;
-    border-bottom: 1px solid #e5e5e5;
-    padding: 0 0 45px 33px;
-    margin-bottom: 10px;
-}
-input[type="checkbox"]+input[type='hidden']+label{
-    display: inline-block;
-    min-width: 21px;
-    min-height: 21px;
-    line-height: 20px;
-    cursor: pointer;
-    background: url(https://www.smtown.com/resources/images/svg/member/btn_check_off.svg) no-repeat;
-    background-size: 21px;
-    padding-left: 33px;
-    box-sizing: border-box;
-    width: 100%;
-    word-break: keep-all;
-    word-wrap: break-word;
-}
-input[type="checkbox"]:checked+input[type='hidden']+label{
-    background: url(https://www.smtown.com/resources/images/svg/member/btn_check_on.svg) no-repeat;
-    background-size: 21px;
-}
-.txtBox{
-    height: 191px;
-    color: #999;
-    background: #f9f9f9;
-    padding: 24px 15px 0 33px;
-    margin-bottom: 10px;
-    line-height: 24px;
-    font-size: 15px;
-}
-.scroll-wrapper{
-    overflow-y: hidden;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-.scroll{
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-}
-.mCustomScrollBox{
-    max-height: none;
-    height: 100%;
-    max-width: 100%;
-    outline: none;
-    overflow-y: scroll;
-}
-.mCSB_container{
-    position: relative;
-    top: 0;
-    left: 0;
-    padding-bottom: 24px;
-    word-wrap: break-word;
-    word-break: keep-all;
-}
-.mCSB_scrollTools{
-    display: block;
-    opacity: 0.75;
-    position: absolute;
-    width: 16x;
-    height: auto;
-    left: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-}
-.mCustomScrollBox::-webkit-scrollbar{
-    display: none;
-}
-.mCSB_draggerContainer{
-    right: -12px;
-    position: absolute;
-    top: 4px;
-    left: 0;
-    bottom: 4px;
-    height: auto;
-}
-.mCSB_dragger{
-    position: absolute;
-    min-height: 30px;
-    height: 8px;
-    top: 6px;
-    display: block;
-    max-height: 149px;
-    background-color: transparent;
-    cursor: pointer;
-    width: 100%;
-    z-index: 1;
-}
-.mCSB_dragger_bar{
-    line-height: 30px;
-    position: relative;
-    width: 4px;
-    height: 100%;
-    margin: 0 auto;
-    border-radius: 16px;
-    text-align: center;
-    background-color: rgba(188, 188, 188, 0);
-}
-.scroll-wrapper{
-    overflow-y: hidden;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-.sigupContent .agree-checkbox-description{
-    font-size: 15px;
+.register-password-description{
+    padding: 14px 0 0 20px;
+    font-size: 14px;
+    line-height: 1.79;
     color: #ababab;
-    margin-bottom: 0;
-    padding-top: 4px;
-    padding-bottom: 6px;
-    border-bottom: none;
+    border-top: 1px solid #e5e5e5;
     word-wrap: break-word;
     word-break: keep-all;
-    line-height: 25px;
-    padding: 0 0 0px 33px;
+    display: inline-block;
+    margin-left: -10px;
+    margin-right: 4px;
 }
-.scroll-wrapper .scroll{
-    height: 100%;
-}
-.sigupContent .txtBox strong {
-    color: #666;
-    font-weight: 500;
-}
-.sigupContent .agree-description {
-    font-size: 15px;
-    color: #999999;
-    line-height: 1.67;
-    padding: 27px 33px;
-    background: #f9f9f9;
-    word-wrap: break-word;
-    word-break: keep-all;
-}
-.sigupContent label:last-child {
-    margin-bottom: 50px;
-}
-.sigupContent .agree-more-than-14 {
-    margin-top: 50px;
-}
-.sigupContent .btnBox{
+.btnBox{
+    margin-top: 36px;
     text-align: center;
-    margin-top: 50px;
-}
-.btnBox {
     font-size: 0;
 }
-.sigupContent .btnBox a.cancelBtn{
+.cancelBtn{
     margin-right: 20px;
-}
-.btnBox a.cancelBtn {
     border: 1px solid #191919;
     color: #191919;
     background: #fff;
-}
-.sigupContent .btnBox a{
     width: 220px;
-}
-.btnBox a, .btnBox button {
     display: inline-block;
     height: 50px;
     line-height: 48px;
@@ -336,15 +205,15 @@ input[type="checkbox"]:checked+input[type='hidden']+label{
     border-radius: 4px;
     font-weight: 500;
 }
-.btnBox button.checkBtn {
+a{
+    text-decoration: none;
+    outline: none;
+}
+.checkBtn{
     border: 1px solid #191919;
     color: #fff;
     background: #191919;
-}
-.sigupContent .btnBox button {
     width: 220px;
-}
-.btnBox button {
     display: inline-block;
     height: 50px;
     line-height: 48px;
@@ -354,7 +223,7 @@ input[type="checkbox"]:checked+input[type='hidden']+label{
     border-radius: 4px;
     font-weight: 500;
 }
-button {
+button{
     margin: 0;
     padding: 0;
     cursor: pointer;
@@ -444,4 +313,15 @@ select {
     line-height: 14px;
     background: url(https://www.smtown.com/resources/images/btn-icon-bullet-b.png) no-repeat 100% 5px;
     padding: 0 14px 0 0;
+}
+.sigupContent dl dd span {
+    margin-bottom: 10px;
+}
+.errorTxt {
+    display: block;
+    margin-top: 12px;
+    color: #ff1601;
+    font-family: 'Noto Sans KR';
+    font-size: 14px;
+    text-align: left;
 }

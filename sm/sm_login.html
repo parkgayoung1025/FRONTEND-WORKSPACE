@@ -130,6 +130,16 @@
         function login(){
             let userId = document.getElementById("userId");
             let password = document.getElementById("password");
+            
+
+            document.getElementById("userId.errors").innerHTML = "";
+            document.getElementById("password.errors").innerHTML = "";
+
+            if(userId.value == "" && password.value == ""){
+                document.getElementById("userId.errors").innerHTML = "이메일을 입력해 주세요.";
+                document.getElementById("password.errors").innerHTML = "비밀번호를 입력해 주세요.";
+                return false;
+            }
 
             if(userId.value == ""){
                 document.getElementById("userId.errors").innerHTML = "이메일을 입력해 주세요.";
@@ -138,9 +148,9 @@
 
             if(password.value == ""){
                 document.getElementById("password.errors").innerHTML = "비밀번호를 입력해 주세요.";
-                return false;
+                return false;            
             }
-        }
+    }
       
 
 
